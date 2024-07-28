@@ -11,6 +11,7 @@
     <div id="game-info">
         <p>Score: <span id="score">0</span></p>
         <p>Time Left: <span id="time-left">30</span> seconds</p>
+        <p>High Score: <span id="high-score">0</span></p>
     </div>
     <div id="game-container">
         <div class="hole"><div class="mole"></div></div>
@@ -19,8 +20,22 @@
         <div class="hole"><div class="mole"></div></div>
         <div class="hole"><div class="mole"></div></div>
         <div class="hole"><div class="mole"></div></div>
+        <div class="hole"><div class="mole"></div></div>
+        <div class="hole"><div class="mole"></div></div>
+        <div class="hole"><div class="mole"></div></div>
     </div>
-    <button id="start-button">Start Game</button>
+    <div id="controls">
+        <button id="start-button">Start Game</button>
+        <select id="difficulty">
+            <option value="easy">Easy</option>
+            <option value="medium">Medium</option>
+            <option value="hard">Hard</option>
+        </select>
+        <label>
+            <input type="checkbox" id="sound-toggle" checked>
+            Sound
+        </label>
+    </div>
     <script src="script.js"></script>
 </body>
 </html>
