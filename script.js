@@ -145,7 +145,6 @@ function showLevelUpModal() {
     levelUpModal.style.display = 'block';
 }
 
-// ... (previous code remains the same)
 
 function getDifficultySettings() {
     return difficulties[difficultySelect.value];
@@ -246,7 +245,6 @@ function closeTutorial() {
     tutorialModal.style.display = 'none';
 }
 
-// Event Listeners
 startButton.addEventListener('click', startGame);
 gameContainer.addEventListener('click', whackMole);
 freezeTimeButton.addEventListener('click', activateFreezeTime);
@@ -256,12 +254,10 @@ moleVisionButton.addEventListener('click', activateMoleVision);
 continueGameButton.addEventListener('click', continueGame);
 closeTutorialButton.addEventListener('click', closeTutorial);
 
-// Initialize high score from local storage
 const savedHighScore = localStorage.getItem('highScore');
 if (savedHighScore) {
     highScore = parseInt(savedHighScore);
     highScoreElement.textContent = highScore;
 }
 
-// Show tutorial on page load
 showTutorial();

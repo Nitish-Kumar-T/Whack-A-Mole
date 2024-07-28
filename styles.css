@@ -69,8 +69,6 @@ h1 {
     height: 80%;
     border-radius: 50%;
     transition: top 0.1s;
-    background-size: cover;
-    background-position: center;
 }
 
 .mole.visible {
@@ -78,19 +76,19 @@ h1 {
 }
 
 .mole.normal {
-    background-image: url('mole-normal.png');
+    background-color: #4CAF50; 
 }
 
 .mole.golden {
-    background-image: url('mole-golden.png');
+    background-color: #FFD700; 
 }
 
 .mole.ninja {
-    background-image: url('mole-ninja.png');
+    background-color: #FFFFFF; 
 }
 
 .mole.bomb {
-    background-image: url('mole-bomb.png');
+    background-color: #000000; 
 }
 
 #controls {
