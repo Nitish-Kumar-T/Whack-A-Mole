@@ -3,15 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Whack-a-Mole</title>
+    <title>Super Whack-a-Mole</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>Whack-a-Mole</h1>
+    <h1>Super Whack-a-Mole</h1>
     <div id="game-info">
         <p>Score: <span id="score">0</span></p>
-        <p>Time Left: <span id="time-left">30</span> seconds</p>
+        <p>Time Left: <span id="time-left">60</span> seconds</p>
         <p>High Score: <span id="high-score">0</span></p>
+        <div id="power-ups">
+            <button id="freeze-time" class="power-up">Freeze Time</button>
+            <button id="double-points" class="power-up">Double Points</button>
+        </div>
     </div>
     <div id="game-container">
         <div class="hole"><div class="mole"></div></div>
@@ -31,10 +35,6 @@
             <option value="medium">Medium</option>
             <option value="hard">Hard</option>
         </select>
-        <label>
-            <input type="checkbox" id="sound-toggle" checked>
-            Sound
-        </label>
     </div>
     <script src="script.js"></script>
 </body>

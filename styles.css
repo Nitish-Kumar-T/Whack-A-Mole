@@ -1,23 +1,27 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     height: 100vh;
     margin: 0;
-    background-color: #87CEEB;
+    background: linear-gradient(to bottom, #87CEEB, #4CAF50);
 }
 
 h1 {
     color: #333;
     text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+    font-size: 2.5em;
 }
 
 #game-info {
     margin-bottom: 20px;
     text-align: center;
     font-size: 18px;
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 15px;
+    border-radius: 10px;
 }
 
 #game-container {
@@ -43,13 +47,24 @@ h1 {
     left: 10%;
     width: 80%;
     height: 80%;
-    background-color: #4CAF50;
     border-radius: 50%;
     transition: top 0.1s;
 }
 
 .mole.visible {
     top: 10%;
+}
+
+.mole.normal {
+    background-color: #4CAF50;
+}
+
+.mole.golden {
+    background-color: gold;
+}
+
+.mole.bomb {
+    background-color: black;
 }
 
 #controls {
@@ -67,8 +82,23 @@ button, select {
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    transition: background-color 0.3s;
 }
 
 button:hover, select:hover {
     background-color: #45a049;
+}
+
+.power-up {
+    background-color: #FFA500;
+    margin: 5px;
+}
+
+.power-up:hover {
+    background-color: #FF8C00;
+}
+
+.power-up:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
 }
