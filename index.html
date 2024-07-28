@@ -3,38 +3,59 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Super Whack-a-Mole</title>
+    <title>Whack-a-Mole: Mole Mayhem</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>Super Whack-a-Mole</h1>
-    <div id="game-info">
-        <p>Score: <span id="score">0</span></p>
-        <p>Time Left: <span id="time-left">60</span> seconds</p>
-        <p>High Score: <span id="high-score">0</span></p>
-        <div id="power-ups">
-            <button id="freeze-time" class="power-up">Freeze Time</button>
-            <button id="double-points" class="power-up">Double Points</button>
+    <div id="game-wrapper">
+        <h1>Whack-a-Mole: Mole Mayhem</h1>
+        <div id="game-info">
+            <div id="stats">
+                <p>Score: <span id="score">0</span></p>
+                <p>Time Left: <span id="time-left">60</span> seconds</p>
+                <p>High Score: <span id="high-score">0</span></p>
+                <p>Level: <span id="level">1</span></p>
+            </div>
+            <div id="power-ups">
+                <button id="freeze-time" class="power-up">Freeze Time (10s)</button>
+                <button id="double-points" class="power-up">Double Points (15s)</button>
+                <button id="multi-whack" class="power-up">Multi-Whack (5 hits)</button>
+                <button id="mole-vision" class="power-up">Mole Vision (10s)</button>
+            </div>
+        </div>
+        <div id="game-container">
+            <!-- Holes will be dynamically generated -->
+        </div>
+        <div id="controls">
+            <button id="start-button">Start Game</button>
+            <select id="difficulty">
+                <option value="easy">Easy</option>
+                <option value="medium">Medium</option>
+                <option value="hard">Hard</option>
+                <option value="extreme">Extreme</option>
+            </select>
         </div>
     </div>
-    <div id="game-container">
-        <div class="hole"><div class="mole"></div></div>
-        <div class="hole"><div class="mole"></div></div>
-        <div class="hole"><div class="mole"></div></div>
-        <div class="hole"><div class="mole"></div></div>
-        <div class="hole"><div class="mole"></div></div>
-        <div class="hole"><div class="mole"></div></div>
-        <div class="hole"><div class="mole"></div></div>
-        <div class="hole"><div class="mole"></div></div>
-        <div class="hole"><div class="mole"></div></div>
+    <div id="tutorial-modal" class="modal">
+        <div class="modal-content">
+            <h2>How to Play Mole Mayhem</h2>
+            <p>1. Click on moles as they appear to earn points.</p>
+            <p>2. Normal moles: 1 point</p>
+            <p>3. Golden moles: 5 points</p>
+            <p>4. Ninja moles: 3 points (they're fast!)</p>
+            <p>5. Avoid bombs: -5 points</p>
+            <p>6. Use power-ups to boost your score!</p>
+            <p>7. Level up to face more challenges!</p>
+            <button id="close-tutorial">Let's Play!</button>
+        </div>
     </div>
-    <div id="controls">
-        <button id="start-button">Start Game</button>
-        <select id="difficulty">
-            <option value="easy">Easy</option>
-            <option value="medium">Medium</option>
-            <option value="hard">Hard</option>
-        </select>
+    <div id="level-up-modal" class="modal">
+        <div class="modal-content">
+            <h2>Level Up!</h2>
+            <p>Congratulations! You've reached level <span id="new-level"></span>!</p>
+            <p>Get ready for more moles and faster gameplay!</p>
+            <button id="continue-game">Continue</button>
+        </div>
     </div>
     <script src="script.js"></script>
 </body>
